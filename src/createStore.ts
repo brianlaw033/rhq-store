@@ -195,7 +195,7 @@ export function createStore(name: string) {
             const theItem = itemType.instanceNewItem(data);
 
             if (theItem) {
-                const theUser = getUserDataSync() as any;
+                const theUser = getUserDataSync?.() as any;
                 const regionProperty = itemType.objectRegionProperty;
 
                 const theSelected = getGlobalState("selected")?.getValue() || [];
