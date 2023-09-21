@@ -1,4 +1,4 @@
-import * as memoize from "memoizee";
+import memoize from "memoizee";
 
 import {
 	ChangeCallbackFunction,

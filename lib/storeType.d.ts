@@ -1,4 +1,4 @@
-import * as memoize from "memoizee";
+import memoize from "memoizee";
 import { ChangeCallbackFunction, IManagedItemDict, IQueryParams, IRelationship, ISchemaItem, messageLevels, objects } from "./types";
 import { storedItem } from "./storedItem";
 import { context } from "./context";

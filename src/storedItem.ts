@@ -1,4 +1,4 @@
-import * as moment from "moment";
+import moment from "moment";
 
 import { IManagedItem, IParsedQuery, ISortParams, messageLevels } from "./types";
 import { CreateUUID, storeType } from "./storeType";
