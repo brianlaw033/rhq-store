@@ -16,8 +16,6 @@ export function createStore(name: string) {
     let dataSchema: ISchemaStorageArray = {};
     const blankStoreType = new storeType("ignore");
     const localStorage = window.localStorage;
-    let processStatusManager = new ProcessStatusManager();
-    processStatusManager.init();
     let userID = "";
 
     function dumpSchema() {
@@ -1102,3 +1100,6 @@ export const {
     dateAddTimezone,
     selectedConsentNumber,
 } = addStore('global')
+
+let processStatusManager = new ProcessStatusManager();
+processStatusManager.init();
