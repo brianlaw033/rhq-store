@@ -15,7 +15,7 @@ const getUserData = async () => {
 	return await getItem("user-profile", "");
 };
 export const getUserDataSync = () => {
-	const theType = getStoreTypeByName("user-profile");
+	const theType = getStoreTypeByName?.("user-profile");
 	return theType?.itemByKey("");
 };
 
