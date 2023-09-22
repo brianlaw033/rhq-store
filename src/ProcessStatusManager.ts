@@ -2,7 +2,7 @@ import { storedItem } from "./storedItem";
 import { CallbackHandler, storeType } from "./storeType";
 import { printData } from "./remotehq";
 import { messageLevels } from "./types";
-import { registerforStateChanges } from ".";
+import { IStore, registerforStateChanges } from ".";
 
 export enum messageCategory {
 	none = 0,

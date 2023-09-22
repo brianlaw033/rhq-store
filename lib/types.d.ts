@@ -286,6 +286,7 @@ export interface IStore {
     dateStripTimezone: (date: Date | null) => Date | null;
     dateAddTimezone: (date: Date | null) => Date | null;
     selectedConsentNumber: () => any;
+    initializeProcessStatusManager: () => void;
 }
 export interface IStores {
     [name: string]: IStore;

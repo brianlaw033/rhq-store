@@ -97,13 +97,17 @@ export const {
     dateStripTimezone,
     dateAddTimezone,
     selectedConsentNumber,
+    initializeProcessStatusManager,
 } = addStore('global')
 
-export function createStore(name: string) {
+initializeProcessStatusManager()
+
+export const createStore = (name: string) => {
     let dataSchema: ISchemaStorageArray = {};
     const blankStoreType = new storeType("ignore");
     const localStorage = window.localStorage;
     let userID = "";
+    let processStatusManager = new ProcessStatusManager();
 
     function dumpSchema() {
         // printData(dataSchema, messageLevels.verbose);
@@ -1003,6 +1007,10 @@ export function createStore(name: string) {
         return null;
     }
 
+    function initializeProcessStatusManager() {
+        processStatusManager.init();
+    }
+
     return {
         name,
         dumpSchema,
@@ -1089,6 +1097,7 @@ export function createStore(name: string) {
         dateStripTimezone,
         dateAddTimezone,
         selectedConsentNumber,
+        initializeProcessStatusManager,
     };
 }
 
@@ -1100,6 +1109,3 @@ export function addStore(name: string) {
     stores[name] = createStore(name)
     return stores[name]
 }
-
-let processStatusManager = new ProcessStatusManager();
-processStatusManager.init();
